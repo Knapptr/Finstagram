@@ -1,9 +1,10 @@
 import {createLike} from './like'
 import { assignID } from './makeUserId';
 
-export const createPost = (url,postsArray) => {
+export const createPost = (user,url,postsArray) => {
     
     return {
+        userid: user,
         id: assignID(postsArray),
         date: new Date(),
         photoSrc:url,

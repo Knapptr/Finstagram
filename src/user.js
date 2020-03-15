@@ -24,7 +24,7 @@ export const createUser = (userArray) => {
                 
         },
         makePost(url) {
-            this.posts.push(createPost(url,this.posts))
+            this.posts.push(createPost(this.id,url,this.posts))
         },
         addFollow(userID) {
             this.social.following.push(userID)
